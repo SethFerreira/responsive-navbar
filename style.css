@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+    background-color: #fff;
+    padding: 25px 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    word-spacing: 2.5px;
+    font-weight: lighter;
+    color: rgb(2, 19, 59);
+    text-transform: capitalize;
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+h1 span {
+    color: #429bda;
+}
+
+.column {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1,
+.nav-links,
+.social-icons {
+    white-space: nowrap;
+}
+
+.nav-links,
+.social-icons {
+    list-style: none;
+}
+
+h1,
+.nav-links {
+    letter-spacing: 2px;
+}
+
+.nav-links li,
+.social-icons li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #010430;
+    margin: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons li a {
+    margin-left: 15px;
+    color: #429bda;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    display: none;
+    font-size: 1.8rem;
+    color: #429bda;
+    transition: color 0.5s, transform 0.4s;
+    cursor: pointer;
+}
+
+.menu-toggle.rotate {
+    transform: rotate(90deg);
+    color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    
+    }
+
+    .column {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links,
+    .social-icons {
+        display: none;
+    } 
+
+    .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      
+    }
+
+    .nav-links li {
+        margin: 12px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    h1,
+    .menu-toggle {
+        font-size: 1.5rem;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+    }
+}
